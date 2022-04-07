@@ -1,8 +1,4 @@
-# React with TypeScript
-
-Learning the TypeScript implementation in a React application.
-
-Includes dev-notes.
+# React + Typescript
 
 [Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/)
 
