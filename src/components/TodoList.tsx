@@ -3,7 +3,7 @@ interface ITodosProps {
   items: { id: string; text: string }[];
 }
 
-const Todos: React.FunctionComponent<ITodosProps> = (props) => {
+const TodoList: React.FunctionComponent<ITodosProps> = (props) => {
   return (
     <ul>
       {props.items.map((todo) => (
@@ -13,4 +13,4 @@ const Todos: React.FunctionComponent<ITodosProps> = (props) => {
   );
 };
 
-export default Todos;
+export default TodoList;
