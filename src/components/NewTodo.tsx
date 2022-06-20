@@ -12,6 +12,7 @@ const NewTodo: React.FunctionComponent<NewTodoProps> = (props) => {
     const enteredText = textInputRef.current!.value;
     // call the prop function
     props.onAddTodo(enteredText);
+    textInputRef.current!.value = "";
   };
 
   return (

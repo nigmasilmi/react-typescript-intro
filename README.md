@@ -10,6 +10,8 @@
 
 ## Useful clues to make TS happy
 
+### useRef
+
 - When you find a nasty warning like this:
 
 ```ts
@@ -32,3 +34,13 @@ import useRef
 - That give us clues that useRef is a Generic type and is expecting a specific type.
 - Ask yourself "What is the type that I am trying to assign to that useRef output? => and that is the type we are going to assign to the generic.
 - Then, the initial state of useRef needs to be assigned to HTMLInputRef or null, and that is why we must initialize it with something different than undefined (), in this case, null serves the objective.(see NewTodo.tsx)
+
+### useState
+
+- This happens when we initialize an empty array in useState
+
+```ts
+(alias) useState<never[]>(initialState: never[] | (() => never[])): [never[], React.Dispatch<React.SetStateAction<never[]>>] (+1 overload)
+```
+
+- This says that the state always will be an empty array. So with the use of generic types we can tell TS how the state will eventually "look like"
