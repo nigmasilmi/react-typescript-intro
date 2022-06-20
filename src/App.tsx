@@ -13,11 +13,20 @@ const App: React.FunctionComponent = () => {
       { id: Math.random().toString(), text: text },
     ]);
   };
+
+  // function to delete a todo
+  const todoDeleteHandler = (id: string) => {
+    setTodos((prevState) => {
+      return prevState.filter((todo) => todo.id !== id);
+    });
+  };
+
   return (
     <div>
       {/* pass the function as prop */}
       <NewTodo onAddTodo={todoAddHandler} />
-      <TodoList items={todos} />
+      {/* pass the function to delete as prop */}
+      <TodoList onDeleteTodo={todoDeleteHandler} items={todos} />
     </div>
   );
 };
