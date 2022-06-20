@@ -1,12 +1,17 @@
 import React, { useRef } from "react";
 
-const NewTodo: React.FunctionComponent = () => {
+type NewTodoProps = {
+  onAddTodo: (todoText: string) => void;
+};
+
+const NewTodo: React.FunctionComponent<NewTodoProps> = (props) => {
   const textInputRef = useRef<HTMLInputElement>(null);
 
   const todoSumbitHandler = (event: React.FormEvent) => {
     event.preventDefault();
     const enteredText = textInputRef.current!.value;
-    console.log(enteredText);
+    // call the prop function
+    props.onAddTodo(enteredText);
   };
 
   return (
