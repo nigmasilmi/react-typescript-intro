@@ -1,10 +1,9 @@
 import React from "react";
-
-interface ITodoListProps {
+interface ITodosProps {
   items: { id: string; text: string }[];
 }
 
-const TodoList: React.FunctionComponent<ITodoListProps> = (props) => {
+const Todos: React.FunctionComponent<ITodosProps> = (props) => {
   return (
     <ul>
       {props.items.map((todo) => (
@@ -14,4 +13,4 @@ const TodoList: React.FunctionComponent<ITodoListProps> = (props) => {
   );
 };
 
-export default TodoList;
+export default Todos;
