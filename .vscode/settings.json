@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "GitHub Dark Default",
+    "editor.formatOnSave": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        
+      },
+      "emmet.triggerExpansionOnTab": true,
+      "[typescriptreact]": {
+        "editor.formatOnSave": true
+    }
+}
