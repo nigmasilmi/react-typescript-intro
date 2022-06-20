@@ -7,7 +7,6 @@ type NewTodoProps = {
 
 const NewTodo: React.FunctionComponent<NewTodoProps> = (props) => {
   const textInputRef = useRef<HTMLInputElement>(null);
-
   const todoSumbitHandler = (event: React.FormEvent) => {
     event.preventDefault();
     const enteredText = textInputRef.current!.value;

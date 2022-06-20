@@ -44,3 +44,12 @@ import useRef
 ```
 
 - This says that the state always will be an empty array. So with the use of generic types we can tell TS how the state will eventually "look like"
+
+## Redux + TS
+
+[Redux usage with TypeScript](https://redux.js.org/usage/usage-with-typescript)
+"Redux Toolkit (RTK) is the standard approach for writing modern Redux logic. RTK is already written in TypeScript, and its API is designed to provide a good experience for TypeScript usage."
+
+[react-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
+[How to Use React Router in Typescript](https://www.pluralsight.com/guides/react-router-typescript)
+[react-router-dom types](https://www.npmjs.com/package/@types/react-router-dom)
