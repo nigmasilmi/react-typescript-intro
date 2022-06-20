@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import classes from "./NewTodo.module.css";
 
 type NewTodoProps = {
   onAddTodo: (todoText: string) => void;
@@ -17,7 +18,7 @@ const NewTodo: React.FunctionComponent<NewTodoProps> = (props) => {
 
   return (
     <form onSubmit={todoSumbitHandler}>
-      <div>
+      <div className={classes["form-control"]}>
         <label htmlFor="todo-text">Todo Text</label>
         <input type="text" id="todo-text" ref={textInputRef} />
       </div>
